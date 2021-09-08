@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>displaying the info  of company info</h1>
+        {% if companies %}
+         <table border='2px'>
+             <tr><th>company_name</th></tr>
+             {% for i in companies %}
+             <tr><td>{{i.company_name}}</td></tr>
+             {% endfor %}
+         </table>
+        {% else %}
+          <h1>no data</h1>
+        {% endif %}
+    </center>
+</body>
+</html>

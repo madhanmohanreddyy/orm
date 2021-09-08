@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        {% if employees %}
+            <table border='2px'>
+                <tr>
+                    <th>company_name</th>
+                    <th>name</th>
+                    <th>age</th>
+                    <th>url</th>
+                </tr>
+                {% for i in employees %}
+                <tr>
+                    <td>{{i.company_name}}</td>
+                    <td>{{i.name}}</td>
+                    <td>{{i.age}}</td>
+                    <td>{{i.url}}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        {% else %}
+         <h1>no data</h1>
+        {% endif %}
+
+    </center>
+</body>
+</html>
